@@ -15,5 +15,6 @@ jobs:
     steps:
     - name: Assign NEW issues and NEW pull requests to project 2
       uses: srggrs/assign-one-project-github-action@1.2.0
+      if: github.event.issue.milestone || github.event.pull_request.milestone
       with:
         project: 'https://github.com/users/felixbarny/projects/1'
